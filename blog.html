@@ -64,7 +64,7 @@
                         <li><a class="nav-link" href="about.html">About us</a></li>
                         <li><a class="nav-link" href="blog.html">Blog</a></li>
                         <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-                        <li><a class="nav-link active" style="background:#f2184f;color:#fff;" href="login.html">Login</a></li>			
+                        <li><a class="nav-link active" style="background:#f2184f;color:#fff;" href="login.html">Login</a></li>
                         <li><a class="nav-link active" style="background:#f2184f;color:#fff;" href="signup.html">Signup now</a></li>
                     </ul>
                 </div>
@@ -72,8 +72,8 @@
         </nav>
     </header>
     <!-- End header -->
-    
- 
+
+
     <!-- Start Banner -->
       <div class="section inner_page_header" style="background-color: whitesmoke">
          <div class="container">
@@ -145,7 +145,7 @@ assets from emerging markets has led to a sharp downfall in the Indian Stock Mar
     <li>To identify factors affecting share market</li>
 <li>To generate the pattern from large set of data of
 stock market for prediction of various aspects of
-a stock</li> 
+a stock</li>
 <li>To predict an approximate value of share price<li>
 <li>To provide analysis for users through web
     application</li>
@@ -268,17 +268,15 @@ exponentially.</p>
 might help investors to reap most out of the markets
 and Trade Racer can act as such a platform.</p><br><br>
 <h4 style="font-weight: bold; ">OUR CREW BEHIND THE TRADE RACER</h4>
-                     <h4>Front-end  :   <a href="https://www.linkedin.com/in/ahmad-yasir-5bb1a1181/"> Yasir</a> ,  Shubham,  Gurneet,  Aman, 
-Kiran</h4>
-<h4>Back-end  :  Jyotsna,  Abhinav</h4>
-<h4>ML  :  Jyotsna,  Aditya,  Abhinav</h4>
-<h4>Content Writing  :  Shubham,  Jyotsna</h4>
+<h4>Website  : <a class="social"href="https://www.linkedin.com/in/ahmad-yasir-5bb1a1181/">Yasir, </a> <a  class="social" href=""> Shubham,</a> <a class="social" href="https://www.linkedin.com/in/gurneet-kaur-7a845a18b"> Gurneet,</a></h4>
+<h4>ML  :  <a class="social" href="https://www.linkedin.com/in/jyotsna-4140ab171/">Jyotsna, </a> <a class="social" href="https://www.linkedin.com/in/aditya-beri-a04386191"> Aditya</a> </h4>
+<h4>Content Writing  :<a  class="social" href=""> Shubham,</a> <a class="social" href="https://www.linkedin.com/in/jyotsna-4140ab171/">Jyotsna </a></h4>
                  </div>
               </div>
             </div>
          </div>
       </div>
-    
+
 
 
 
@@ -288,8 +286,8 @@ Kiran</h4>
 
 
     <!---footer--->
-    
-    
+
+
     <footer class="footer-box">
         <div class="container">
             <div class="row">
@@ -330,7 +328,7 @@ Kiran</h4>
                         </div>
                     </div>
                 </div>
-                
+
             <div class="col-md-12" >
                            <ul class="full social_icon margin-top_20">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -381,7 +379,7 @@ Kiran</h4>
 (function ($) {
     $.fn.countTo = function (options) {
         options = options || {};
-        
+
         return $(this).each(function () {
             // set options for current element
             var settings = $.extend({}, $.fn.countTo.defaults, {
@@ -391,58 +389,58 @@ Kiran</h4>
                 refreshInterval: $(this).data('refresh-interval'),
                 decimals:        $(this).data('decimals')
             }, options);
-            
+
             // how many times to update the value, and how much to increment the value on each update
             var loops = Math.ceil(settings.speed / settings.refreshInterval),
                 increment = (settings.to - settings.from) / loops;
-            
+
             // references & variables that will change with each update
             var self = this,
                 $self = $(this),
                 loopCount = 0,
                 value = settings.from,
                 data = $self.data('countTo') || {};
-            
+
             $self.data('countTo', data);
-            
+
             // if an existing interval can be found, clear it first
             if (data.interval) {
                 clearInterval(data.interval);
             }
             data.interval = setInterval(updateTimer, settings.refreshInterval);
-            
+
             // initialize the element with the starting value
             render(value);
-            
+
             function updateTimer() {
                 value += increment;
                 loopCount++;
-                
+
                 render(value);
-                
+
                 if (typeof(settings.onUpdate) == 'function') {
                     settings.onUpdate.call(self, value);
                 }
-                
+
                 if (loopCount >= loops) {
                     // remove the interval
                     $self.removeData('countTo');
                     clearInterval(data.interval);
                     value = settings.to;
-                    
+
                     if (typeof(settings.onComplete) == 'function') {
                         settings.onComplete.call(self, value);
                     }
                 }
             }
-            
+
             function render(value) {
                 var formattedValue = settings.formatter.call(self, value, settings);
                 $self.html(formattedValue);
             }
         });
     };
-    
+
     $.fn.countTo.defaults = {
         from: 0,               // the number the element should start at
         to: 0,                 // the number the element should end at
@@ -453,7 +451,7 @@ Kiran</h4>
         onUpdate: null,        // callback method for every time the element is updated
         onComplete: null       // callback method for when the element finishes updating
     };
-    
+
     function formatter(value, settings) {
         return value.toFixed(settings.decimals);
     }
@@ -466,10 +464,10 @@ jQuery(function ($) {
       return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
     }
   });
-  
+
   // start all the timers
-  $('.timer').each(count);  
-  
+  $('.timer').each(count);
+
   function count(options) {
     var $this = $(this);
     options = $.extend({}, options || {}, $this.data('countToOptions') || {});
@@ -480,8 +478,3 @@ jQuery(function ($) {
 </body>
 
 </html>
-
-
-
-
-
